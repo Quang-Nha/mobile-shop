@@ -1,0 +1,47 @@
+@charset "UTF-8";
+.infomid {
+	display: flex;
+	padding: 3% 0;
+}
+
+h2 {
+	padding-left: 2%;
+}
+
+.price {
+	color: #ff0000;
+	font-size: 50px;
+}
+
+.des {
+	font-size: 20px;
+}
+
+.add_cart{
+  margin: 20px 0;
+}
+
+.add_cart a {
+  background-color: #ffad33;
+  color: white;
+  padding: 2% 8%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.add_cart a:hover {
+  background-color: #00e6e6;
+}
+
+@media screen and (max-width: 700px) {
+  .infomid {
+  display: block;
+  }
+  
+  .info {
+  padding: 0 90px;
+  }
+}  
+  

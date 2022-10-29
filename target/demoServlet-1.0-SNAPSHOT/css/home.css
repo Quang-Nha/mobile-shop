@@ -1,0 +1,329 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+}
+
+/* Header */
+.header {
+  background-color: #000000;
+  overflow: auto;
+  
+  /* các phần tử con căn giữa và float left */
+  display: flex;
+  align-items: center;
+}
+
+/* cột trái */
+.left_header{
+  text-align: center;
+}
+
+.left_header h2 {
+  color: #ffffff;
+}
+
+.left_header p {
+  color: #00e6e6;
+}
+
+/* cột phải */
+.right_header{
+  width: 100%;
+  height: 30px;
+  
+  display: flex;
+  align-items: center;
+  margin: 2% 0;
+}
+
+/* link a bên cột phải */
+.right_header a{
+  width: 25%;
+  height: 100%;
+  text-align: left;
+  background-color: #e6e6e6;
+  color: #000000;
+  padding: 1%;
+  border-radius: 3px 0 0 3px;
+  margin-left: 2%;
+  text-decoration: none;
+  
+  display: flex;
+  align-items: center;
+}
+
+/* input bên cột phải */
+.right_header input{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  border-right: 30px solid #ffad33;
+  padding-left: 10px;
+  margin-right: 2%;
+}
+
+.cart input{
+  background-color: #ffad33;
+  color: white;
+  padding: 4% 15%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.right_header input:focus {
+  background-color: #ffff33;
+}
+
+/* thanh điều hướng sticky*/
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 5% 0 15%;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.topnav li {
+  display: inline-block;
+}
+
+.last {
+  float: right;
+}
+
+.topnav a, .dropbtn {
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #33cc33;
+}
+
+.topnav.dropdown {
+  display: inline-block;
+}
+
+/* trình đơn thả xuống không hiển thị */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* các sản phẩm trong trình đơn thả xuống */
+.dropdown-content a {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* các sản phẩm trong trình đơn thả xuống khi hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #ff3300;
+}
+
+/* các sản phẩm trong trình đơn thả xuống khi active */
+.dropdown-content a:active {
+  color: #ff99ff;
+}
+
+/* trình đơn thả xuống hiển thị khi hover*/
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.rightcolumn {
+	float: right;
+	width: 10%;
+	position: sticky;
+  	top: 50px;
+  	margin-top: 3px;
+  	box-shadow: 0 0 35px #ffff33;
+  	background-color: #ffad33;
+}
+
+.rightcolumn:hover {
+  	box-shadow: 0 0 35px #ff99ff;
+}
+
+.rightcolumn img {
+	width: 100%;
+}
+
+.rightcolumn a {
+	text-decoration: none;
+}
+
+.desc {
+  display: block;	
+  padding: 15px;
+  text-align: center;
+  background-color: #ffad33;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* phần giữa chứa danh sách sản phẩm */
+.mid {   
+  padding: 15px;
+  padding-right: 15%;
+}
+
+/* khung chứa 1 sản phẩm */
+.gallery {
+  display: block;
+  float: left;
+  margin: 10px;
+  text-decoration: none;
+  padding: 10px;
+  width: 30%;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+
+
+/* hình ảnh sản phẩm */
+.fakeimg {
+	width: 100%;
+}
+
+/* miêu tả sản phẩm */
+.gallery .type {
+	color: #000000;
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+.gallery .name {
+	color: #006600;
+}
+
+.gallery .price {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+/* các link a khi hover, active */
+.gallery:hover {
+  box-shadow: 0 0 35px #4CAF50;
+}
+
+.gallery:active .type, .gallery:active .name, .gallery:active .price {
+  color: #ff99ff;
+}
+
+/* vùng phân trang */
+.center {
+  text-align: center;
+  clear: left;
+}
+
+.pagination {
+  display: inline-block;
+  margin-top: 10%;
+}
+
+.pagination a {
+  color: #0066cc;
+  float: left;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+/* tạo vùng đệm bên dưới */
+.mid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding-bottom: 10px;
+  text-align: center;
+  background: #000033;
+  color: #e69900;
+  margin-top: 20px;
+}
+
+/* Bố cục đáp ứng - khi màn hình có chiều rộng dưới 800px,
+2 ảnh một hàng, tiêu đề chồng lên nhau */
+@media screen and (max-width: 800px) {
+
+  .gallery {
+  width: 40%;
+  }
+  
+  .header {
+  display: block;
+  }
+  
+}
+
+/* Bố cục đáp ứng - khi màn hình có chiều rộng dưới 400px,
+đặt các liên kết điều hướng chồng lên nhau thay vì cạnh nhau, và không sticky
+1 ảnh 1 hàng */
+@media screen and (max-width: 400px) {
+  .topnav a, li form {
+    float: none;
+    width: 100%;
+  }
+  
+  .topnav {
+  	position:static;
+  }
+  
+  .topnav li {
+  display: block;
+  float: none;
+  }
+  
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+  
+  .gallery {
+  width: 100%;
+  }
+
+}
+
+/* tất cả các link khi ấn */
+a:active {
+  color: #ff99ff;
+}

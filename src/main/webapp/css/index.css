@@ -1,0 +1,134 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+/* hiển thị account */
+.account {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  z-index: 2;
+  font-size: 15px;
+  text-align: right;
+  color: #ffffff;
+}
+
+.account a:hover {
+  color: #ff0000;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+body {
+  font-family: Arial;
+
+  background: #f9f9f9;
+  
+  /* chỉ định kích thước */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* xác định các cột */
+.column {
+  float: left;
+  height: 100%;
+  
+  /* định vị nội dung bên trong theo position */
+  position: relative;
+}
+
+/* cột trái */
+.column_left {
+  background-image: url("/PRJ321x_A2/media/background2.jpg"); 
+  padding: 10px;
+  width: 20%;
+  background-position: right;
+}
+
+.column_left h3{
+  color: #e69900;
+  text-align: center;
+
+}
+
+.column_left a{
+  display: block;
+  background-color: #990099;
+  color: #ffffff;
+  padding: 10px 10px;
+  border-radius: 3px;
+}
+
+.column_left a:hover{
+  background-color: #ff33ff;
+}
+
+/* cột phải */
+.column_right {
+  background-color: #1a2034;
+  color: #ffffff;
+  width: 80%;
+  overflow: auto;
+}
+
+/* hình ảnh */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  height:40%;
+}
+
+.fakeimg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* bảng */
+table {
+  border-collapse: collapse;
+  width: 50%;
+  background-color: #20293f;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+caption {
+  background-color: #990099;
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 2px;
+  text-align: left;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tr:last-child {
+  border-bottom: none;
+  padding: 15px;
+}
+
+th, td {
+  padding: 15px 8px;
+  text-align: left;
+}
+
+tr:hover {background-color: #009999;}
+
+/* bố cục đáp ứng khi dưới 500px các cột xếp chồng lên nhau */
+@media screen and (max-width: 500px) {
+  .column {
+  float: none;
+  width: 100%;
+  height: auto;
+  }
+}
